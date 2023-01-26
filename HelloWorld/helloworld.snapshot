@@ -15,16 +15,16 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
-            "id" : "24739054-335e-3e35-ab85-391546337609",
-            "instanceIdentifier" : "ea56abd5-0185-1000-11fb-1750459ee910",
-            "name" : "MergeContent",
+            "groupId" : "4681a235-9429-3b34-909a-1186c472d34e",
+            "id" : "c27607bf-5680-3c5c-97b6-06b0a1b6cbb9",
+            "instanceIdentifier" : "f00966eb-0185-1000-04dc-11607ccb278b",
+            "name" : "LogAttribute",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
-          "identifier" : "26248e09-90f9-38d3-afdc-b18cac280c39",
-          "instanceIdentifier" : "ea58ff6a-0185-1000-3aa7-0ceca4037587",
+          "groupIdentifier" : "4681a235-9429-3b34-909a-1186c472d34e",
+          "identifier" : "3608ba1c-5dca-302d-8af0-82aba77a32cc",
+          "instanceIdentifier" : "f00aff88-0185-1000-69c5-2cfe3d973973",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -34,9 +34,9 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
+            "groupId" : "4681a235-9429-3b34-909a-1186c472d34e",
             "id" : "52938ce3-5685-30d6-8eb9-376df29dc338",
-            "instanceIdentifier" : "ea52f5e6-0185-1000-1af5-3edc39cf9dce",
+            "instanceIdentifier" : "28ea27c0-8f8d-3844-e05d-d38a08172cf2",
             "name" : "GenerateFlowFile",
             "type" : "PROCESSOR"
           },
@@ -49,15 +49,15 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
+        "identifier" : "4681a235-9429-3b34-909a-1186c472d34e",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "ea52984c-0185-1000-d342-55e2ce453ffe",
+        "instanceIdentifier" : "f007d7a5-0185-1000-ad87-cc5cdc6301fe",
         "labels" : [ ],
         "name" : "hellowworld",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 344.0,
-          "y" : 72.0
+          "x" : 328.0,
+          "y" : 96.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -73,9 +73,9 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
+          "groupIdentifier" : "4681a235-9429-3b34-909a-1186c472d34e",
           "identifier" : "52938ce3-5685-30d6-8eb9-376df29dc338",
-          "instanceIdentifier" : "ea52f5e6-0185-1000-1af5-3edc39cf9dce",
+          "instanceIdentifier" : "28ea27c0-8f8d-3844-e05d-d38a08172cf2",
           "maxBackoffPeriod" : "10 mins",
           "name" : "GenerateFlowFile",
           "penaltyDuration" : "30 sec",
@@ -145,7 +145,7 @@
           "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "original", "failure", "merged" ],
+          "autoTerminatedRelationships" : [ "success" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -157,160 +157,95 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "50d740dd-caa4-3e53-9651-2ae90c1a361c",
-          "identifier" : "24739054-335e-3e35-ab85-391546337609",
-          "instanceIdentifier" : "ea56abd5-0185-1000-11fb-1750459ee910",
+          "groupIdentifier" : "4681a235-9429-3b34-909a-1186c472d34e",
+          "identifier" : "c27607bf-5680-3c5c-97b6-06b0a1b6cbb9",
+          "instanceIdentifier" : "f00966eb-0185-1000-04dc-11607ccb278b",
           "maxBackoffPeriod" : "10 mins",
-          "name" : "MergeContent",
+          "name" : "LogAttribute",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 608.0,
-            "y" : 304.0
+            "x" : 1151.3819910070404,
+            "y" : 380.8135361560244
           },
           "properties" : {
-            "Keep Path" : "false",
-            "Merge Strategy" : "Bin-Packing Algorithm",
-            "Attribute Strategy" : "Keep Only Common Attributes",
-            "Compression Level" : "1",
-            "Maximum Number of Entries" : "1000",
-            "Minimum Group Size" : "0 B",
-            "Maximum number of Bins" : "5",
-            "Tar Modified Time" : "${file.lastModifiedTime}",
-            "Delimiter Strategy" : "Do Not Use Delimiters",
-            "Merge Format" : "Binary Concatenation",
-            "mergecontent-metadata-strategy" : "Do Not Merge Uncommon Metadata",
-            "Minimum Number of Entries" : "1"
+            "Log prefix" : "LOG_ATTRIBUTE",
+            "character-set" : "UTF-8",
+            "Log FlowFile Properties" : "true",
+            "Log Level" : "info",
+            "attributes-to-log-regex" : ".*",
+            "Output Format" : "Line per Attribute",
+            "Log Payload" : "false"
           },
           "propertyDescriptors" : {
-            "Keep Path" : {
-              "displayName" : "Keep Path",
+            "Log prefix" : {
+              "displayName" : "Log prefix",
               "identifiesControllerService" : false,
-              "name" : "Keep Path",
+              "name" : "Log prefix",
               "sensitive" : false
             },
-            "Maximum Group Size" : {
-              "displayName" : "Maximum Group Size",
+            "character-set" : {
+              "displayName" : "Character Set",
               "identifiesControllerService" : false,
-              "name" : "Maximum Group Size",
+              "name" : "character-set",
               "sensitive" : false
             },
-            "Merge Strategy" : {
-              "displayName" : "Merge Strategy",
+            "Log FlowFile Properties" : {
+              "displayName" : "Log FlowFile Properties",
               "identifiesControllerService" : false,
-              "name" : "Merge Strategy",
+              "name" : "Log FlowFile Properties",
               "sensitive" : false
             },
-            "Attribute Strategy" : {
-              "displayName" : "Attribute Strategy",
+            "Log Level" : {
+              "displayName" : "Log Level",
               "identifiesControllerService" : false,
-              "name" : "Attribute Strategy",
+              "name" : "Log Level",
               "sensitive" : false
             },
-            "Compression Level" : {
-              "displayName" : "Compression Level",
+            "attributes-to-ignore-regex" : {
+              "displayName" : "Attributes to Ignore by Regular Expression",
               "identifiesControllerService" : false,
-              "name" : "Compression Level",
+              "name" : "attributes-to-ignore-regex",
               "sensitive" : false
             },
-            "Maximum Number of Entries" : {
-              "displayName" : "Maximum Number of Entries",
+            "Attributes to Ignore" : {
+              "displayName" : "Attributes to Ignore",
               "identifiesControllerService" : false,
-              "name" : "Maximum Number of Entries",
+              "name" : "Attributes to Ignore",
               "sensitive" : false
             },
-            "Minimum Group Size" : {
-              "displayName" : "Minimum Group Size",
+            "Attributes to Log" : {
+              "displayName" : "Attributes to Log",
               "identifiesControllerService" : false,
-              "name" : "Minimum Group Size",
+              "name" : "Attributes to Log",
               "sensitive" : false
             },
-            "Maximum number of Bins" : {
-              "displayName" : "Maximum number of Bins",
+            "attributes-to-log-regex" : {
+              "displayName" : "Attributes to Log by Regular Expression",
               "identifiesControllerService" : false,
-              "name" : "Maximum number of Bins",
+              "name" : "attributes-to-log-regex",
               "sensitive" : false
             },
-            "Tar Modified Time" : {
-              "displayName" : "Tar Modified Time",
+            "Output Format" : {
+              "displayName" : "Output Format",
               "identifiesControllerService" : false,
-              "name" : "Tar Modified Time",
+              "name" : "Output Format",
               "sensitive" : false
             },
-            "Delimiter Strategy" : {
-              "displayName" : "Delimiter Strategy",
+            "Log Payload" : {
+              "displayName" : "Log Payload",
               "identifiesControllerService" : false,
-              "name" : "Delimiter Strategy",
-              "sensitive" : false
-            },
-            "Merge Format" : {
-              "displayName" : "Merge Format",
-              "identifiesControllerService" : false,
-              "name" : "Merge Format",
-              "sensitive" : false
-            },
-            "Footer File" : {
-              "displayName" : "Footer",
-              "identifiesControllerService" : false,
-              "name" : "Footer File",
-              "resourceDefinition" : {
-                "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
-              },
-              "sensitive" : false
-            },
-            "Max Bin Age" : {
-              "displayName" : "Max Bin Age",
-              "identifiesControllerService" : false,
-              "name" : "Max Bin Age",
-              "sensitive" : false
-            },
-            "Demarcator File" : {
-              "displayName" : "Demarcator",
-              "identifiesControllerService" : false,
-              "name" : "Demarcator File",
-              "resourceDefinition" : {
-                "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
-              },
-              "sensitive" : false
-            },
-            "Correlation Attribute Name" : {
-              "displayName" : "Correlation Attribute Name",
-              "identifiesControllerService" : false,
-              "name" : "Correlation Attribute Name",
-              "sensitive" : false
-            },
-            "Header File" : {
-              "displayName" : "Header",
-              "identifiesControllerService" : false,
-              "name" : "Header File",
-              "resourceDefinition" : {
-                "cardinality" : "SINGLE",
-                "resourceTypes" : [ "TEXT", "FILE" ]
-              },
-              "sensitive" : false
-            },
-            "mergecontent-metadata-strategy" : {
-              "displayName" : "Metadata Strategy",
-              "identifiesControllerService" : false,
-              "name" : "mergecontent-metadata-strategy",
-              "sensitive" : false
-            },
-            "Minimum Number of Entries" : {
-              "displayName" : "Minimum Number of Entries",
-              "identifiesControllerService" : false,
-              "name" : "Minimum Number of Entries",
+              "name" : "Log Payload",
               "sensitive" : false
             }
           },
           "retriedRelationships" : [ ],
           "retryCount" : 10,
-          "runDurationMillis" : 0,
+          "runDurationMillis" : 25,
           "scheduledState" : "ENABLED",
           "schedulingPeriod" : "0 sec",
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
-          "type" : "org.apache.nifi.processors.standard.MergeContent",
+          "type" : "org.apache.nifi.processors.standard.LogAttribute",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
